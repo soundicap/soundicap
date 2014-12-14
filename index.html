@@ -22,10 +22,15 @@
     <script src="bower_components/timbre/timbre.dev.js"></script>
     <script src="bower_components/subcollider/index.js"></script>
     <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/angularjs/angular.js"></script>
   </head>
-  <body>
-    <button onclick="buttonPressed()">Press me</button>
-
+  <body ng-app="soundicap" ng-controller="MainCtrl">
+    BD: <input type="range" ng-model="beatVals.bd" min=0 max=16> {{beatVals.bd}}<br>
+    SD: <input type="range" ng-model="beatVals.sd" min=0 max=16> {{beatVals.sd}}<br>
+    HH1: <input type="range" ng-model="beatVals.hh1" min=0 max=16> {{beatVals.hh1}}<br>
+    HH2: <input type="range" ng-model="beatVals.hh2" min=0 max=16> {{beatVals.hh2}}<br>
+    CYM: <input type="range" ng-model="beatVals.cym" min=0 max=16> {{beatVals.cym}}<br>
+    <button ng-click="buttonPressed()">Press me</button>
     <script src="main.js"></script>
   </body>
 </html>
